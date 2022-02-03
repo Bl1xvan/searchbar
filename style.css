@@ -16,9 +16,20 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: .25rem;
-    background-color: #eee;
+    gap: 2rem;
+    background-color: #9D3802;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: #FE9F6D;
     margin-top: 10vh;
+    padding: 20px;
+}
+
+.results{
+    padding: 25px 0 0 10px;
+    font-size: 1.25rem;
+    color: #341809;
+    font-weight: bold;
 }
 
 label{
@@ -44,9 +55,10 @@ label{
 }
 
 .card{
-    background-color: #eef;
+    background-color: #FFE8DC;
     overflow-wrap: break-word;
     width: 100%;
     padding: 10px;
     font-size: 1.25rem;
+    color: #341809;
 }

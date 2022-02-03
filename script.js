@@ -2,9 +2,9 @@ const userCardTemplate = document.querySelector("[data-user-template]");
 const userCardsContainer = document.querySelector("[data-user-cards-container]");
 const searchInput = document.querySelector("[data-search]");
 const results = document.querySelector(".results");
+const resultsstring = "Total Users Displayed: "
 ////append a child to users later.
 let users = [];
-
 
 searchInput.addEventListener("input", e =>{
     const value = e.target.value.toLowerCase()
@@ -20,7 +20,7 @@ searchInput.addEventListener("input", e =>{
         }
     })
     total = users.length - minus
-    results.innerText = "Total Users Displayed: " + total;
+    results.innerText = resultsstring + total;
 })
 
 fetch("https://jsonplaceholder.typicode.com/users")
@@ -35,7 +35,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
             userCardsContainer.append(card)
             return{name: user.name, email: user.email, element:card}
         })
-        results.innerText = "Total Users Displayed: " + document.querySelectorAll(".card").length;
+        results.innerText = resultsstring + document.querySelectorAll(".card").length;
     })
 
     
